@@ -9,7 +9,7 @@ def parallel_processing(n, m, data):
         start, index = heapq.heappop(threads)
         end = start + data[i]
         output.append((index, start))
-        heapq.headpush(threads, (end, index))
+        heapq.heappush(threads, (end, index))
 
     return output
 
